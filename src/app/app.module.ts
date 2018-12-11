@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { UiModule } from './ui/ui.module';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

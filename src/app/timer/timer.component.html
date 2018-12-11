@@ -1,0 +1,20 @@
+<div class="col-lg-6 text-center" style="margin: auto;">
+  <button class="btn btn-lg btn-success" style="width: 150px; margin-right: 20px;" [disabled]="disableStart" (click)="startTimer()">Start!</button>
+  <button class="btn btn-lg btn-danger" style="width: 150px;" (click)="stopTimer()">Stop!</button>
+
+  <div *ngIf="isActiveTime" class="font-weight-bold align-content-center justify-content-center" style="text-align: center; font-size:6em">
+    <p>{{formatTime()}}</p>
+  </div>
+
+  <div *ngIf="!isActiveTime" class="font-weight-bold align-content-center justify-content-center" style="text-align: center; font-size:6em">
+    <p>{{100000}}</p>
+  </div>
+
+  <button class="btn btn-lg btn-warning" style="width: 150px;" (click)="restartTimer()">Restart!</button>
+</div>
+
+<ul>
+  <li *ngFor="let kursant of listaKursantow">
+    {{kursant}}
+  </li>
+</ul>
